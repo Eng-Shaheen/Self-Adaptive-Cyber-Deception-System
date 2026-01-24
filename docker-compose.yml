@@ -1,0 +1,32 @@
+services:
+  webhook:
+    build:
+      context: ./code/webhook
+      dockerfile: Dockerfile
+    working_dir: /root/FYP-Project/code/webhook
+    volumes:
+      - /home/kali/FYP-Project:/root/FYP-Project
+    ports:
+      - "5000:5000"
+
+  ai:
+    image: python:3.11-slim
+    working_dir: /root/FYP-Project/code/ai_module
+    volumes:
+      - /home/kali/FYP-Project:/root/FYP-Project
+    command: >
+      bash -c "pip install --upgrade pip &&
+               pip install requests --quiet &&
+               python3 generate_deception_action.py"
+
+  executor:
+    image: python:3.11-slim
+    working_dir: /root/FYP-Project/code/executor
+    volumes:
+      - /home/kali/FYP-Project:/root/FYP-Project
+    command: >
+      bash -c "pip install --upgrade pip &&
+               pip install requests --quiet &&
+               mkdir -p /root/FYP-Project/code/ai_module/logs &&
+               touch /root/FYP-Project/code/ai_module/logs/ai_decisions.jsonl &&
+               python3 executor.py"

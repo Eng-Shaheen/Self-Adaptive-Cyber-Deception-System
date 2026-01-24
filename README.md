@@ -48,6 +48,13 @@ This system aligns with real-world SOC and blue-team workflows by:
 While implemented as a research and learning project, the architecture mirrors how commercial deception and monitoring solutions are integrated into enterprise environments.
 
 ---
+## Use Cases
+- SOC alert triage and enrichment
+- Attacker behavior analysis
+- Deception-based threat intelligence
+- Security monitoring demonstrations
+
+---
 
 ## Technologies Used
 - Python

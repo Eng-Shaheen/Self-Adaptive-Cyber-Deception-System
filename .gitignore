@@ -1,0 +1,34 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Virtualenv / Env folders
+venv/
+.env/
+
+# Logs
+*.log
+code/ai_module/logs/
+code/executor/decoy_actions.jsonl
+code/webhook/received_logs.json
+
+# Generated decoy files
+assets/ai_generated/
+
+# Docker
+*.env
+*.log
+docker-compose.override.yml
+*.tmp
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE / Editor
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace

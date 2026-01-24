@@ -48,6 +48,8 @@ You should see:
 - AI decisions
 - Deception actions
 - System metrics
+  
+This dashboard simulates what a SOC analyst would monitor during active attacker engagement.
 
 ---
 

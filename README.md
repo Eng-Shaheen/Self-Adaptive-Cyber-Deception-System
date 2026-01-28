@@ -33,15 +33,15 @@ Cowrie Honeypot → Event Webhook → Decision Engine → Deception Executor →
 ## Screenshots & Observations
 
 ### 1. Monitoring Dashboard
-![Dashboard](screenshots/Dashboard.png)  
+![Dashboard](screenshots/dashboard.png)  
 **Observation:** Real-time events from the honeypot are visible. The dashboard shows incoming attacks, AI decisions, and deployed decoys. This simulates a SOC analyst monitoring live attacker activity.
 
 ### 2. Detailed AI Decision #1
-![Detailed Decision](screenshots/Detailed_Decision.png)  
+![Detailed Decision](screenshots/detailed_decision.png)  
 **Observation:** AI engine generates deception strategies based on attacker behavior. Each decision corresponds to a specific decoy deployment or response action.
 
 ### 3. Detailed AI Decision #2
-![Detailed Decision 2](screenshots/Detailed_Decision_2.png)  
+![Detailed Decision 2](screenshots/detailed_decision_2.png)
 **Observation:** Additional decisions for complex attacker interactions. Demonstrates adaptive response logic and dynamic threat mitigation.
 
 ---

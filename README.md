@@ -1,74 +1,83 @@
 # Self-Adaptive Cyber Deception System
 
-## Overview
-This project implements a defensive cyber deception system designed to detect attacker activity and respond with adaptive deception techniques in real time.
+## Project Objective
+This project demonstrates a **defensive cyber deception system** designed to detect attacker activity and respond with adaptive deception techniques in real time.  
 
-The system integrates a honeypot-based detection layer with an AI-driven decision module that selects appropriate deception actions based on observed attacker behavior. The objective is to enhance early threat detection, increase attacker engagement time, and reduce the effectiveness of malicious reconnaissance.
-
-This project demonstrates practical concepts used in modern defensive security operations, including deception technology, automated response, and security monitoring.
+The system integrates a **honeypot-based detection layer** with an **AI-driven decision engine** to select appropriate deception actions based on observed attacker behavior.  
+This architecture mirrors **real-world SOC workflows**, providing early threat detection, attacker engagement, and automated defensive responses.
 
 ---
 
 ## System Architecture
-The system follows a modular pipeline:
-
+**Pipeline:**  
 Cowrie Honeypot → Event Webhook → Decision Engine → Deception Executor → Monitoring Dashboard
 
-Each component operates independently and communicates through structured event data to ensure scalability and flexibility.
+- **Honeypot (Cowrie):** Captures attacker interaction data (login attempts, commands).  
+- **Event Webhook:** Normalizes and forwards events to the AI engine.  
+- **Decision Engine:** Analyzes events and selects deception strategies.  
+- **Deception Executor:** Deploys decoys and artifacts for attacker engagement.  
+- **Monitoring Dashboard:** Provides real-time visibility of events, decisions, and actions.
 
 ---
 
-## Key Components
+## SOC / Security Operations Relevance
+- Monitors suspicious activity continuously  
+- Enriches alerts with deception-based intelligence  
+- Automates defensive responses  
+- Provides actionable visibility via dashboards and logs  
 
-- **Honeypot (Cowrie)**  
-  Captures attacker interaction data such as login attempts and command execution.
-
-- **Event Webhook**  
-  Receives and normalizes honeypot events for processing.
-
-- **Decision Engine**  
-  Analyzes incoming events and selects appropriate deception responses based on predefined logic and contextual analysis.
-
-- **Deception Executor**  
-  Deploys realistic decoy artifacts and system responses based on the selected deception strategy.
-
-- **Monitoring Dashboard**  
-  Provides real-time visibility into attacker events, system decisions, and deployed deception actions.
+> Demonstrates real SOC/blue-team workflow concepts using AI and deception technologies.
 
 ---
 
-## Security Operations Relevance
-This system aligns with real-world SOC and blue-team workflows by:
+## Screenshots & Observations
 
-- Monitoring suspicious activity
-- Enriching alerts with deception-based intelligence
-- Automating defensive responses
-- Providing visibility through dashboards and logs
+### 1. Monitoring Dashboard
+![Dashboard](screenshots/Dashboard.png)  
+**Observation:** Real-time events from the honeypot are visible. The dashboard shows incoming attacks, AI decisions, and deployed decoys. This simulates a SOC analyst monitoring live attacker activity.
 
-While implemented as a research and learning project, the architecture mirrors how commercial deception and monitoring solutions are integrated into enterprise environments.
+### 2. Detailed AI Decision #1
+![Detailed Decision](screenshots/Detailed Decision.png)  
+**Observation:** AI engine generates deception strategies based on attacker behavior. Each decision corresponds to a specific decoy deployment or response action.
+
+### 3. Detailed AI Decision #2
+![Detailed Decision 2](screenshots/Detailed Decision 2.png)  
+**Observation:** Additional decisions for complex attacker interactions. Demonstrates adaptive response logic and dynamic threat mitigation.
 
 ---
+
 ## Use Cases
-- SOC alert triage and enrichment
-- Attacker behavior analysis
-- Deception-based threat intelligence
-- Security monitoring demonstrations
+- SOC alert triage and enrichment  
+- Attacker behavior analysis  
+- Deception-based threat intelligence  
+- Security monitoring demonstrations  
 
 ---
 
 ## Technologies Used
-- Python
-- Docker & Docker Compose
-- Cowrie Honeypot
-- Flask
-- Linux
+- Python 3.9+  
+- Docker & Docker Compose  
+- Cowrie Honeypot  
+- Flask  
+- Linux environment  
 
 ---
 
 ## How to Run
-See `RUN.md` for step-by-step instructions to deploy and test the system using Docker.
+See `RUN.md` for **step-by-step instructions** to deploy and test the system.  
+The setup simulates a complete SOC-style workflow for learning and demonstration purposes.
 
 ---
 
-## Disclaimer
-This project is intended for defensive security research and educational purposes only.
+## Notes
+- AI decision engine adapts responses in real time  
+- Decoys are stored in `assets/ai_generated/`  
+- AI logs stored in `code/ai_module/logs/ai_decisions.jsonl`  
+- All observations are **defensive only**; no offensive actions are included  
+
+---
+
+## Next Steps / Future Enhancements
+- Expand deception coverage to multiple hosts and services  
+- Integrate with external SIEM systems for automated alert enrichment  
+- Enhance AI logic for more complex attack detection and response  

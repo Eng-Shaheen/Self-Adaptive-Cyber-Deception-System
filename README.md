@@ -106,10 +106,9 @@ Every decision is logged to **ai_decisions.jsonl** and every executed action is 
 **Observation:** Second decision for a different attacker interaction showing confidence score **0.92** with a distinct prompt - directing attacker toward `/home/admin/admin.conf.bak`. Comparing Decision 1 and Decision 2 confirms the system produces unique, non-repetitive decoy outputs for every event - validating the adaptive deception capability rather than static templated responses.  
 
 ---
-
 ### 4️⃣ Decoy Artifact Verification - Generated Files Directory
-**Image:** Show Image  
-**Observation:** The `assets/ai_generated/` directory showing multiple dynamically named decoy files - each uniquely named using action type, source IP, timestamp, and generation ID (e.g. `create_decoy_file_10.0.2.15_20251125141930_8eb6f402.txt`). File sizes ranging from 429–452 bytes confirm each file contains unique content rather than identical copies - validating end-to-end dynamic deception execution.  
+![Decoy Artifacts](screenshots/decoy_artifacts.png)  
+**Observation:** The `assets/ai_generated/` directory showing multiple dynamically named decoy files - each uniquely named using action type, source IP, timestamp, and generation ID (e.g. `create_decoy_file_10.0.2.15_20251125141930_8eb6f402.txt`). File sizes ranging from 429–452 bytes confirm each file contains unique content rather than identical copies - validating end-to-end dynamic deception execution.
 
 ---
 
